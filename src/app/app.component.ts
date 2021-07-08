@@ -1,10 +1,21 @@
-import { Component, VERSION } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { ProductListComponent } from './product-list/product-list.component';
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
+
 export class AppComponent  {
-  name = 'Angular ' + VERSION.major;
+  name = 'Produtos';
+
+  products=['cd','disk','note'];
+
+  MostraP(){
+    location.href = "product-list.component.html"
+ }
 }
+
+
